@@ -1,0 +1,34 @@
+{
+  "name": "cachier",
+  "version": "1.0.0",
+  "description": "Caching with various backends",
+  "main": "index.js",
+  "dependencies": {
+    "dank-map": "^0.1.0",
+    "dank-queue": "^0.2.6",
+    "memcached": "^2.2.0",
+    "object-hash": "^0.9.1",
+    "uuid": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wankdanker/node-cachier.git"
+  },
+  "keywords": [
+    "cache",
+    "redis",
+    "memcached",
+    "multi",
+    "memory"
+  ],
+  "author": "Dan VerWeire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wankdanker/node-cachier/issues"
+  },
+  "homepage": "https://github.com/wankdanker/node-cachier#readme"
+}
