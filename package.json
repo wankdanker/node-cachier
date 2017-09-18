@@ -1,6 +1,6 @@
 {
   "name": "cachier",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Caching with various backends",
   "main": "index.js",
   "dependencies": {
