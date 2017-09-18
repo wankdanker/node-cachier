@@ -62,7 +62,7 @@ test('Functionize RedisStore Usage', function (t) {
 	});
 
 	lookup('a', function (err, data) {
-		t.equals(data, "some value for the key")
+		t.equals(data, "this is the value of a")
 
 		c.end(function (e) {
 			t.end();
