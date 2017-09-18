@@ -1,6 +1,16 @@
 module.exports = require('./lib/cache');
-module.exports.MemStore = require('./lib/store-mem');
-module.exports.MaterMemStore = require('./lib/store-master-mem');
-module.exports.RedisStore = require('./lib/store-redis');
-module.exports.MemcachedStore = require('./lib/store-memcached');
-module.exports.MultiStore = require('./lib/store-multistore');
+lazyRequire(module.exports, 'MemStore', './lib/store-mem');
+lazyRequire(module.exports, 'MaterMemStore', './lib/store-master-mem');
+lazyRequire(module.exports, 'RedisStore', './lib/store-redis');
+lazyRequire(module.exports, 'MemcachedStore', './lib/store-memcached');
+lazyRequire(module.exports, 'MultiStore', './lib/store-multistore');
+
+function lazyRequire (target, key, path) {
+  Object.defineProperty(target, key, {
+    get : function () {
+      return require(path);
+    }
+    , enumerable : true
+    , configurable : true
+  });
+}
